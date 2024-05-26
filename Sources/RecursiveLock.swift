@@ -77,14 +77,14 @@ internal final class RecursiveLock {
 }
 #else
 internal final class RecursiveLock {
-    private let lock = NSRecursiveLock()
+    private let _lock = NSRecursiveLock()
 
     func lock() {
-        lock.lock()
+        _lock.lock()
     }
 
     func unlock() {
-        lock.unlock()
+        _lock.unlock()
     }
 }
 #endif
